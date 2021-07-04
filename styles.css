@@ -22,7 +22,7 @@ img {
 header {
     font-size: 1.8rem;
     font-weight: 700;
-    background-color: #2e323f;    
+    background-color: #2e323f;
 }
 
 header,
@@ -31,7 +31,8 @@ header,
 .feature-title,
 .info-section-title,
 .info-title,
-.footer-title {
+.footer-title,
+.footer-section-title {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
 }
@@ -46,6 +47,7 @@ section {
     width: 80%;
     margin: 0 auto;
 }
+
 .nav-item {
     list-style: none;
     text-transform: uppercase;
@@ -57,14 +59,14 @@ section {
 }
 
 .hero-section {
-    background-color: #3B4050;  
-    padding-bottom: 4em;  
+    background-color: #3B4050;
+    padding-bottom: 4em;
 }
 
 .hero-title {
     font-size: 4rem;
-    color: #fff; 
-    width: 90%;  
+    color: #fff;
+    width: 90%;
 }
 
 .hero-title-accent,
@@ -83,14 +85,16 @@ section {
 .hero-paragraph,
 .feature-parapraph,
 .info-section-paragraph,
-.info-paragraph {
+.info-paragraph,
+.footer-section-paragraph,
+.footer-nav {
     font-family: 'Montserrat', sans-serif;
 }
 
 .hero-button {
     background-color: #A59678;
     border-radius: 100px;
-    padding: .5em 2em;    
+    padding: .5em 2em;
     border: none;
 }
 
@@ -131,10 +135,10 @@ section {
 
 .info {
     background-color: #3B4050;
-    padding: 1em 2em;  
+    padding: 1em 2em;
 }
 
-.info + .info {
+.info+.info {
     margin-top: 3.5em;
 }
 
@@ -185,21 +189,121 @@ footer {
         display: flex;
     }
 
-    .col + .col {
+    .col+.col {
         margin-left: 2em;
     }
-    
+
     aside {
-        display: flex;        
+        display: flex;
     }
 
     .info + .info {
         margin-left: 2em;
         margin-top: 0;
     }
-    
+
     .info {
         padding: 0;
     }
+}
+
+@media(min-width: 1000px) {
+    .row {
+        display: flex;
+    }
+
+    aside {
+        flex-direction: column;    
+          
+    }
+
+    .info + .info {
+        margin-top: 4em;
+    }
+
+    .info {
+        margin-top: 3.5em;
+    }
+
+    .hero-section,
+    .feature-section,
+    .info-section {
+        padding: 8em 0;
+    }
+
+    .hero-title {
+        font-size: 9rem;
+        line-height: 1;
+    }
+
+    .hero-paragraph,
+    .hero-button-link {
+        font-size: 2.4rem;
+    }
+
+    .hero-paragraph,
+    .hero-button {
+        position: relative;
+        top: 40%;
+    }
+
+    .hero-paragraph {
+        width: 100%;
+    }
+
+    .feature-title {
+        font-size: 3rem;
+    }
+
+    .feature-paragraph {
+        font-size: 1.8rem;
+    }
     
+    .feature-card + .feature-card {
+        margin-left: 5em;
+    }
+
+    .info {
+        margin-top: 5em;
+    }
+
+    .info + .info {
+        margin-left: 0;
+    }
+
+    .info-section-title {
+        font-size: 3.6rem;
+    }   
+
+    .info-section-paragraph {
+        font-size: 2.1rem;
+    }
+    .col-1 {
+        width: 60%;        
+    }
+    .col-2 {
+        width: 30%;
+    }
+    .row {
+        justify-content: space-between;
+    }
+
+    .footer-title {
+        font-size: 2.4rem;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .footer-section-paragraph,
+    .footer-nav li {
+        font-size: 2.1rem;
+    }
+    .footer-nav {        
+        padding: 0;
+    }
+
+ .footer-col-1 {
+     width: 38%;
+
+    }
 }
