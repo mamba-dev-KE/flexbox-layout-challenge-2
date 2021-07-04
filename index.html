@@ -6,20 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Design Challenge</title>
+    <script src="./js/app.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.3/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <!-- <header>
-        <div class="container row">
+    <header>
+        <div class="container nav-wrapper">
             <div class="logo">
                 <img src="./images/logo.svg" alt="">
             </div>
-            <nav class="nav">
+            <nav class="nav" id="main-menu">
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
@@ -28,8 +30,11 @@
                     <li class="nav-item"><a class="nav-link nav-link-button" href="#">Sign Up</a></li>
                 </ul>
             </nav>
+            <a href="#" onclick="toggleMenu();" class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </a>
         </div>
-    </header> -->
+    </header>
     <main>
         <section class="hero-section">
             <div class="container row">
@@ -45,56 +50,66 @@
             </div>
         </section>
         <section class="feature-section">
-            <div class="container row">
-                <div class="wrapper">
+            <div class="container feature-wrapper">               
                     <div class="feature-card col">
                         <h2 class="feature-title">Mobile-first</h2>
-                        <p class="feature-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam sed
-                            autem quod molestias
-                            alias architecto cum quas culpa, doloremque, voluptate ea reiciendis non.</p>
+                        <p class="feature-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam
+                            sed
+                            autem quod molestia alias architecto cum quas culpa, doloremque, voluptate ea reiciendis
+                            non.</p>
                     </div>
                     <div class="feature-card col">
                         <h2 class="feature-title">Efficient</h2>
-                        <p class="feature-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam sed
+                        <p class="feature-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam
+                            sed
                             autem quod molestias
                             alias architecto cum quas culpa, doloremque, voluptate ea reiciendis non.</p>
                     </div>
                     <div class="feature-card col">
                         <h2 class="feature-title">Done right</h2>
-                        <p class="feature-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam sed
+                        <p class="feature-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam
+                            sed
                             autem quod molestias
                             alias architecto cum quas culpa, doloremque, voluptate ea reiciendis non.</p>
-                    </div>
-                </div>
+                    </div>                
             </div>
         </section>
         <section class="info-section">
             <div class="container row">
                 <div class="col-1">
                     <h2 class="info-section-title">It doesn't have to be so hard</h2>
-                    <p class="info-section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia neque suscipit beatae sit
-                        omnis, rerum ea, culpa voluptates ratione quo officiis provident maiores aliquam. Magnam eveniet, fuga,
-                        aperiam accusamus voluptate vitae quaerat quidem ipsa dolor similique facilis quam error officia illo
+                    <p class="info-section-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Voluptatibus quia neque suscipit beatae sit
+                        omnis, rerum ea, culpa voluptates ratione quo officiis provident maiores aliquam. Magnam
+                        eveniet, fuga,
+                        aperiam accusamus voluptate vitae quaerat quidem ipsa dolor similique facilis quam error officia
+                        illo
                         assumenda? Saepe eveniet iste aut consequuntur!</p>
                     <img class="info-section-image" src="./images/the-image.jpg" alt="website sketches">
-                    <p class="info-section-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est dolore consectetur quidem placeat tempora
-                        sequi sed earum odio incidunt et voluptatum beatae repellat, dicta repudiandae nesciunt eius. Voluptatem
-                        id veritatis asperiores laboriosam atque esse fuga, autem distinctio molestiae neque nemo quae laborum
+                    <p class="info-section-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+                        dolore consectetur quidem placeat tempora
+                        sequi sed earum odio incidunt et voluptatum beatae repellat, dicta repudiandae nesciunt eius.
+                        Voluptatem
+                        id veritatis asperiores laboriosam atque esse fuga, autem distinctio molestiae neque nemo quae
+                        laborum
                         dolorum, rerum ea. Illo, tenetur doloribus.</p>
                 </div>
                 <div class="col-2">
                     <aside>
                         <div class="info">
                             <h3 class="info-title">Break it down</h3>
-                            <p class="info-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odio maxime incidunt, voluptas laboriosam adipisci voluptatum sint molestiae sit.</p>
+                            <p class="info-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                                odio maxime incidunt, voluptas laboriosam adipisci voluptatum sint molestiae sit.</p>
                         </div>
                         <div class="info">
                             <h3 class="info-title">Work your way up</h3>
-                            <p class="info-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odio maxime incidunt, voluptas laboriosam adipisci voluptatum sint molestiae sit.</p>
+                            <p class="info-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                                odio maxime incidunt, voluptas laboriosam adipisci voluptatum sint molestiae sit.</p>
                         </div>
                         <div class="info">
                             <h3 class="info-title">Always practice coding</h3>
-                            <p class="info-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odio maxime incidunt, voluptas laboriosam adipisci voluptatum sint molestiae sit.</p>
+                            <p class="info-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                                odio maxime incidunt, voluptas laboriosam adipisci voluptatum sint molestiae sit.</p>
                         </div>
                     </aside>
                 </div>
@@ -105,7 +120,9 @@
             <div class="container row">
                 <div class="col footer-col-1">
                     <h3 class="footer-section-title">About our company</h3>
-                    <p class="footer-section-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus tempore provident reprehenderit aut esse eius animi debitis rerum quae molestiae. Reiciendis accusamus minus natus.</p>
+                    <p class="footer-section-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Ducimus tempore provident reprehenderit aut esse eius animi debitis rerum quae molestiae.
+                        Reiciendis accusamus minus natus.</p>
                 </div>
                 <div class="col footer-col-2">
                     <h3 class="footer-section-title">Getting around</h3>
@@ -123,7 +140,7 @@
                         <li>sit amet</li>
                         <li>consectetur</li>
                     </ul>
-                </div>             
+                </div>
                 <div class="col footer-col-2">
                     <h3 class="footer-section-title">And more</h3>
                     <ul class="footer-nav">
@@ -132,9 +149,10 @@
                         <li>sit amet</li>
                         <li>consectetur</li>
                     </ul>
-                </div> 
+                </div>
             </div>
         </footer>
     </main>
 </body>
+
 </html>
